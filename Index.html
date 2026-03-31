@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026 | The Agentic OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .agent-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-500/30">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                OpenClaw <span class="text-indigo-400">2026</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#vision" class="hover:text-indigo-400 transition">Vision</a>
+                <a href="#architecture" class="hover:text-indigo-400 transition">Architecture</a>
+                <a href="#oss" class="hover:text-indigo-400 transition">Open Source</a>
+                <a href="#business" class="hover:text-indigo-400 transition">Business</a>
+                <a href="#hardware" class="hover:text-indigo-400 transition">Setup</a>
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-500 px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-indigo-500/20">
+                Deploy Agent
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="vision" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                The Operating System for the <span class="gradient-text">Agentic Age</span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+                OpenClaw gives AI models the "hands" to operate your digital world. 
+                Move beyond chatbots—build an autonomous, local-first workforce.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#architecture" class="glass px-8 py-4 rounded-2xl flex items-center gap-3 border border-indigo-500/30 hover:border-indigo-500 transition group">
+                    Explore Architecture
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <h2 class="text-3xl font-bold mb-4">Multi-Agent Architecture</h2>
+                <p class="text-slate-400">Stop building prompts. Start building squads.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gateway -->
+                <div class="glass p-8 rounded-3xl reveal agent-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">The Gateway</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        The central controller. It manages tool access (Browser, Files, Terminal) and provides the API bridge to communication channels like Slack and Discord.
+                    </p>
+                </div>
+
+                <!-- Soul.md -->
+                <div class="glass p-8 rounded-3xl reveal agent-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">The Workers (Souls)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Each agent has a <code>Soul.md</code> file defining its personality, KPIs, and boundaries. Specialized agents (Researcher, Writer, Auditor) live in isolated workspaces.
+                    </p>
+                </div>
+
+                <!-- Memory -->
+                <div class="glass p-8 rounded-3xl reveal agent-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 text-indigo-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Vectorized Memory</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Agents share a "Global Brain" but keep "Short-term Action Logs" private. This prevents context leakage while allowing team coordination.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="oss" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 reveal">
+                <h2 class="text-3xl font-bold mb-6">The "Zero-Token" Economy</h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    OpenClaw is model-agnostic. By integrating with **Ollama**, you can run state-of-the-art open-source models (Llama 3.2, Qwen 2.5) directly on your local hardware.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1 text-green-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span><strong>Cost:</strong> Zero per-token costs. Fixed electricity cost only.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1 text-green-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span><strong>Privacy:</strong> Data never leaves your network. Perfect for legal/financial.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1 text-green-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span><strong>Hybrid Routing:</strong> Use local Llama for 90% of tasks; escalate to Claude 4.6 API for high-stakes logic.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-1 glass p-8 rounded-3xl border-indigo-500/20 border reveal">
+                <div class="font-mono text-sm space-y-2">
+                    <p class="text-indigo-400">// OpenClaw local-model config</p>
+                    <p><span class="text-purple-400">"model"</span>: <span class="text-green-400">"ollama/qwen2.5-coder:32b"</span>,</p>
+                    <p><span class="text-purple-400">"api_base"</span>: <span class="text-green-400">"http://localhost:11434"</span>,</p>
+                    <p><span class="text-purple-400">"privacy_mode"</span>: <span class="text-green-400">true</span>,</p>
+                    <p><span class="text-purple-400">"tools"</span>: [<span class="text-green-400">"browser"</span>, <span class="text-green-400">"terminal"</span>, <span class="text-green-400">"python"</span>]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Use Cases -->
+    <section id="business" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center reveal">Real-World Business Applications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Case 1 -->
+                <div class="glass p-6 rounded-2xl reveal border-t-2 border-indigo-500">
+                    <h4 class="font-bold mb-2">Solo-SaaS Founder</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">Agents manage the full funnel: scraping leads, drafting personalized emails, and coding features based on user feedback tickets.</p>
+                </div>
+                <!-- Case 2 -->
+                <div class="glass p-6 rounded-2xl reveal border-t-2 border-green-500">
+                    <h4 class="font-bold mb-2">Automated Ops</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">Agent monitors Stripe, reconciles transactions in Excel, and pings the owner only if a mismatch occurs during auditing.</p>
+                </div>
+                <!-- Case 3 -->
+                <div class="glass p-6 rounded-2xl reveal border-t-2 border-purple-500">
+                    <h4 class="font-bold mb-2">Personal Buying Agent</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">OpenClaw browses marketplaces, chats with sellers to negotiate prices, and sets up calendar appointments for pick-ups.</p>
+                </div>
+                <!-- Case 4 -->
+                <div class="glass p-6 rounded-2xl reveal border-t-2 border-red-500">
+                    <h4 class="font-bold mb-2">Proactive Developer</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">The agent watches GitHub repos, automatically runs tests on new PRs, and refactors code using local LLM power.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] reveal border border-white/5">
+            <h2 class="text-3xl font-bold mb-8 text-center">Hardware Choice: The Mac Mini M4</h2>
+            <p class="text-slate-400 text-center mb-12">For most users in 2026, the Mac Mini is the perfect "Always-On" server for OpenClaw.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="font-bold text-indigo-400 mb-4">Why Mac Mini?</h4>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li>• <strong>Unified Memory:</strong> Fast GPU-RAM for LLMs.</li>
+                        <li>• <strong>Power Efficiency:</strong> Runs 24/7 for pennies.</li>
+                        <li>• <strong>Form Factor:</strong> Tucks away in a drawer.</li>
+                        <li>• <strong>Headless Mode:</strong> Controlled via SSH/OpenClaw UI.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-indigo-400 mb-4">Recommended Spec</h4>
+                    <div class="bg-slate-800/50 p-4 rounded-xl font-mono text-xs text-slate-300">
+                        <p>CPU: M4 Pro (12-Core)</p>
+                        <p>RAM: 64GB (Crucial for 30B+ Models)</p>
+                        <p>Storage: 1TB NVMe</p>
+                        <p>Network: 10Gb Ethernet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 text-center border-t border-white/5 text-slate-500 text-sm">
+        <p>© 2026 OpenClaw Ecosystem. Decentralized. Private. Autonomous.</p>
+    </footer>
+
+    <script>
+        // Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu Toggle (Simplified for demo)
+        document.querySelector('button').addEventListener('click', () => {
+            alert('Opening Deploy Dashboard...');
+        });
+    </script>
+</body>
+</html>
